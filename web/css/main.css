@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    animation: animate infinite 10s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    height: 100vh;
+    
+}
+
+#menu{
+    display: flex;
+    background: black;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    animation: moving 0.3s infinite linear;
+}
+p{
+    background: white;
+    border: black solid 5px;
+    border-radius: 100px 50px 10px 70px;
+}
+
+@keyframes animate{
+    0%{
+        background: red;
+        color: purple;
+    }
+    14%{
+        background: orange;
+        color: indigo;
+    }
+    28%{
+        background: yellow;
+        color: blue;
+    }
+    42%{
+        background: green;
+        color: green;
+    }
+    56%{
+        background: blue;
+        color: yellow;
+    }
+    70%{
+        background: indigo;
+        color: orange;
+    }
+    84%{
+        background: purple;
+        color: red;
+    }
+}
+
+@keyframes moving{
+    0%{
+        filter: blur(50px);
+        transform: translateY(100px);
+        transition: 0.3s;
+    }
+    25%{
+        filter: blur(0);
+        transform: translateX(100px);
+        transition: 0.3s;
+    }
+    50%{
+        filter: blur(50px);
+        tansform: translateY(-100px);
+        transition: 0.3s;
+    }
+    74%{
+        filter: blur(0);
+        transform: translateX(-100px);
+        transition: 0.3s;
+    }
+}

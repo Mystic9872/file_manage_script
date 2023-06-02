@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+input:hover{
+    transition: 0.5s;
+}
+
+body{
+    background-color: gray;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    position: absolute;
+    top: 0;
+}
+
+input:focus{
+    background: red;
+    font-size: 50px;
+    visibility: hidden;
+}
+
+h1{
+    text-transform: lowercase;
+    transition: 0.3s;
+    animation: animate infinite 0.2s linear;
+    font-size: 70px;
+}
+
+h1:hover{
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+@keyframes animate{
+    0%{
+        filter: blur(30px);
+        font-size: 200%;
+    }
+    25%{
+        filter: blur(15px);
+        font-size: 130%;
+    }
+    50%{
+        filter: blur(0);
+        font-size:70%;
+    }
+}
